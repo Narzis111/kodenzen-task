@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import logo from "/logo-removebg-preview.png"
 // import use from "../../../assets/user.png"
 // import { useContext } from "react";
 // import { AuthContext } from "../../../providers/AuthProvider";
@@ -18,7 +19,7 @@ const Navbar = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
-        <li><NavLink to="/logins">Login</NavLink></li>
+        <li><NavLink to="/login">Login</NavLink></li>
     </>
 
 
@@ -34,7 +35,12 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-
+                <div className="flex items-center">
+                  <div className="w-20 items-center">
+                    <img className="w-full h-full object-fit" src={logo} alt="" />
+                  </div>
+                    <h1 className="text-xl text-blue-950 font-extrabold mt-5">S<span className="text-yellow-600">K</span>YLINE R<span className="text-yellow-600">E</span>ALTY</h1>
+                    </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -55,7 +61,7 @@ const Navbar = () => {
                     //     <button onClick={handleSignOut}>Sign Out</button>
 
                     //     :
-                    //     <Link to="/logins">
+                    //     <Link to="/login">
                     //         <button className="btn bg-slate-600">Login</button>
                     //     </Link>
                 }
