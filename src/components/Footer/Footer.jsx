@@ -2,7 +2,7 @@ import logo from "/logo-removebg-preview.png"
 const Footer = () => {
     return (
         <div>
-            <footer className="footer footer-center p-10 bg-slate-200 text-base-content rounded">
+            <footer className="mt-36 footer footer-center p-10 bg-slate-200 text-base-content rounded">
             <aside>
             <div className="w-20 items-center">
                     <img className="w-full h-full object-fit" src={logo} alt="" />

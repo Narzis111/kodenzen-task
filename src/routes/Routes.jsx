@@ -5,6 +5,8 @@ import Login from "../pages/Login/Login";
 import Root from "../layout/Root";
 import Home from "../pages/Home/Home";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import ViewDetail from "../pages/ViewDetail/ViewDetail";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -15,9 +17,13 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch('/residential.json'),
+      },
+      {
+        path: '/asset/:id',
+        element:<PrivateRoutes><ViewDetail></ViewDetail></PrivateRoutes>,
         loader: () => fetch('../../public/residential.json'),
       },
-
       {
         path: "/register",
         element: <Register></Register>

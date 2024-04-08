@@ -8,7 +8,7 @@ const PrivateRoutes = ({ children }) => {
 
 
     if (loading) {
-        return <h1 className="text-4xl">Loading</h1>
+        return <span className="loading loading-ball loading-lg"></span>
     }
 
     if (!user) {
