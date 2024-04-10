@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "profession": "Software Engineer",
+    "comment": "Working with Skyline Realty was a fantastic experience! As a software engineer, I appreciate efficiency and attention to detail, and Skyline Realty delivered on both fronts. From finding the perfect home to guiding me through the purchasing process, their expertise and professionalism were evident every step of the way. I highly recommend their services to anyone in search of their dream home."
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "profession": "Marketing Manager",
+    "comment": "As a marketing manager with a busy schedule, I needed a real estate agency that could accommodate my needs and preferences. Skyline Realty not only met but exceeded my expectations. Their personalized approach, coupled with their in-depth knowledge of the market, made the home buying process smooth and stress-free. I'm thrilled with my new home and grateful for Skyline Realty's exceptional service."
+  },
+  {
+    "id": 3,
+    "name": "David Johnson",
+    "profession": "Teacher",
+    "comment": "As a teacher, I value honesty, integrity, and reliability. Skyline Realty exemplified these qualities throughout my home buying journey. From providing valuable insights into different neighborhoods to negotiating the best deal, they went above and beyond to ensure I found the perfect home for me and my family. I couldn't be happier with the outcome, and I wholeheartedly recommend Skyline Realty to anyone in the market for a new home."
+  }
+]

@@ -13,8 +13,7 @@ import { Helmet } from "react-helmet-async";
 
 const Register = () => {
 
-  
-  const { createUser, updateUserProfile } = useAuth();
+  const { createUser } = useAuth();
   const { showPassword, setShowPassword } = useState(false);
   const { register, handleSubmit, formState: { errors }, } = useForm();
 
@@ -23,7 +22,7 @@ const Register = () => {
   const from = "/";
 
   const onSubmit = (data) => {
-    const { email, password, image, fullName } = data;
+    const { email, password} = data;
 
 
     // Password verification
@@ -32,14 +31,21 @@ const Register = () => {
       return;
     }
 
+    // //create user and update profile
+    // createUser(email, password)
+    //   .then(() => {
+    //     updateUserProfile(fullName, image)
+    //       .then(() => {
+    //         toast.success('Registration successful');
+    //         navigate(from);
+    //       });
+    //   });
     //create user and update profile
     createUser(email, password)
       .then(() => {
-        updateUserProfile(fullName, image)
-          .then(() => {
             toast.success('Registration successful');
             navigate(from);
-          });
+          
       });
   };
 

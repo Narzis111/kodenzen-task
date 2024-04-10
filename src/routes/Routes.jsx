@@ -49,8 +49,8 @@ const router = createBrowserRouter([
         element: <BookingForm></BookingForm>
       },
       {
-        path: "/profile",
-        element: <UpdateProfileForm></UpdateProfileForm>
+        path: "/update",
+        element: <PrivateRoutes><UpdateProfileForm></UpdateProfileForm></PrivateRoutes>
       },
       {
         path: "/login",
