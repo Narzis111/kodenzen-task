@@ -1,48 +1,58 @@
 
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import useAuth from "../../hooks/useAuth";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
 
+  
   const { createUser, updateUserProfile } = useAuth();
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const { showPassword, setShowPassword } = useState(false);
+  const { register, handleSubmit, formState: { errors }, } = useForm();
 
   // navigation systems
   const navigate = useNavigate();
   const from = "/";
 
   const onSubmit = (data) => {
-      const { email, password, image, fullName } = data;
-      
-      //create user and update profile
-      createUser(email, password)
+    const { email, password, image, fullName } = data;
+
+
+    // Password verification
+    if (!/(?=.*[a-z])/.test(password) || !/(?=.*[A-Z])/.test(password) || password.length < 6) {
+      toast.error('Password must contain at least 6 characters including at least one uppercase letter and one lowercase letter');
+      return;
+    }
+
+    //create user and update profile
+    createUser(email, password)
+      .then(() => {
+        updateUserProfile(fullName, image)
           .then(() => {
-              updateUserProfile(fullName, image)
-                  .then(() => {
-                        navigate(from);
+            toast.success('Registration successful');
+            navigate(from);
+          });
       });
-    });
   };
 
   return (
     <>
+       <Helmet>
+                <title>Skyline | Register</title>
+             </Helmet>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Register now!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+            <img className='w-full h-full object-cover' src="https://i.ibb.co/MPfHnXp/joel-filipe-j-U9-VAZDGMzs-unsplash.jpg" alt="" />
+
           </div>
           <form
             onSubmit={handleSubmit(onSubmit)}
@@ -88,16 +98,21 @@ const Register = () => {
                   {...register("image")}
                 />
               </div>
-              <div className="form-control">
+              <div className="form-control relative">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
                 <input
-                  type="text"
+                  type={showPassword ? "text" : "password"}
                   placeholder="password"
                   className="input input-bordered"
                   {...register("password", { required: true })}
                 />
+                <span className="absolute text-slate-500 top-14 right-6" 
+                onClick={ () => setShowPassword(!showPassword)}>
+                {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                </span>
+                
                 {errors.password && (
                   <span className="text-red-500">This field is required</span>
                 )}

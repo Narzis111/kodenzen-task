@@ -1,10 +1,17 @@
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 
 const ErrorPage = () => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     return (
+        <>
+        <Helmet>
+          <title>
+            Skyline | error
+          </title>
+        </Helmet>
         <section className='bg-white '>
-          <div className='container flex items-center min-h-screen px-6 py-12 mx-auto'>
+                    <div className='container flex items-center min-h-screen px-6 py-12 mx-auto'>
             <div className='flex flex-col items-center max-w-sm mx-auto text-center'>
               <p className='p-3 text-sm font-medium text-primary rounded-full bg-secondary bg-opacity-30 '>
                 <svg
@@ -38,6 +45,8 @@ const ErrorPage = () => {
             </div>
           </div>
         </section>
+        
+        </>
       )
 };
 

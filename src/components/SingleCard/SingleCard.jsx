@@ -12,6 +12,13 @@ const SingleCard = ({asset}) => {
     return (
         
         <div className="card w-96 bg-base-100 p-4 shadow-xl hover:animate-pulse">
+       
+       
+       
+       
+       
+       
+       
         <figure><img className="rounded-lg" src={image} alt={id} /></figure>
         <div className="card-body">
           <h2 className="card-title">{estate_title}</h2>

@@ -7,6 +7,11 @@ import Home from "../pages/Home/Home";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import ViewDetail from "../pages/ViewDetail/ViewDetail";
 import PrivateRoutes from "./PrivateRoutes";
+import AboutUs from "../pages/AboutUs/AboutUs";
+import ContactUs from "../pages/ContactUS/ContactUs";
+import BookingForm from "../pages/BookingForm/BookingForm";
+import UpdateProfileForm from "../components/UpdateProfileForm/UpdateProfileForm";
+
 
 const router = createBrowserRouter([
   {
@@ -22,11 +27,30 @@ const router = createBrowserRouter([
       {
         path: '/asset/:id',
         element:<PrivateRoutes><ViewDetail></ViewDetail></PrivateRoutes>,
-        loader: () => fetch('../../public/residential.json'),
+        loader: () => fetch('/residential.json'),
       },
+      {
+        path: '/about',
+        element:<AboutUs></AboutUs>,
+        
+      },
+      {
+        path: '/contact',
+        element:<PrivateRoutes><ContactUs></ContactUs></PrivateRoutes>,
+        
+      },
+
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/booking",
+        element: <BookingForm></BookingForm>
+      },
+      {
+        path: "/profile",
+        element: <UpdateProfileForm></UpdateProfileForm>
       },
       {
         path: "/login",
