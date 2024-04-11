@@ -1,66 +1,105 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import MapWithMarker from "../../components/MapWithMarker/MapWithMarker";
 import { Helmet } from "react-helmet-async";
+import { IoLocationOutline } from "react-icons/io5";
+import { BiHomeAlt2 } from "react-icons/bi";
+import { PiBathtubThin, PiBedLight } from "react-icons/pi";
+import { GoDotFill } from "react-icons/go";
 
 
-const ViewDetail =() => {
-  
+const ViewDetail = () => {
+
   const assets = useLoaderData();
-    const {id} = useParams();
-    const idInt = parseInt(id);
-    const asset = assets.find(asset => asset.id === idInt);
-    console.log(assets, id); 
-    const {description, estate_title, location, area, price, latitude, longitude} = asset;
-    console.log(asset);
-    return (
+  const { id } = useParams();
+  const idInt = parseInt(id);
+  const asset = assets.find(asset => asset.id === idInt);
+  console.log(assets, id);
+  const { description, estate_title, status, facilities, segment_name, location, area, price, latitude, longitude } = asset;
+
+  return (
     <>
       <Helmet>
-                <title>SR | view detail</title>
-             </Helmet>
-     
-      <div className="bg-slate-300 rounded-lg min-h-screen">
-      
-      <div className="h-[80vh] w-3/4 mx-auto pt-10"><div className="object-cover rounded-lg bg-cover h-full w-full flex items-center justify-center" style={{ backgroundImage: `url(${asset.image})` }}>
-        <h1 className="text-white text-3xl font-semibold bg-slate-500 items-center rounded-lg p-4">{estate_title}</h1>
-      </div></div>
+        <title>SR | view detail</title>
+      </Helmet>
 
-      <div className="container mx-auto py-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-semibold mb-4">Property Details</h2>
-          <p className="mb-4">{description}</p>
-          <p className="mb-4">Location: {location}</p>
-          <p className="mb-4">Area: {area}</p>
-          <p className="mb-4">Price: {price}</p>
-          {/* Add Google Map using React Leaflet */}
-          <div className="h-80vh]">
-          <MapWithMarker latitude={latitude} longitude={longitude} />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
+
+        <div className="div grid grid-rows-2">
+          <div>
+            <div className="h-[60vh] mx-auto pt-4"><div className="object-cover rounded-lg bg-cover h-full w-full flex items-center justify-center" style={{ backgroundImage: `url(${asset.image})` }}>
+
+              <div className="bg-white opacity-50 rounded-lg">
+                <h1 className="text-3xl font-extrabold text-black items-center p-4">{estate_title}</h1>
+
+              </div>
+            </div></div>
           </div>
           <div>
-            <Link to="/booking"><button>Mark your Visit</button></Link>
-            <Link to="/contact"><button>For More Info Contact Us </button></Link>
-          
-          
-
+            <div>
+              <MapWithMarker latitude={latitude} longitude={longitude} />
+            </div>
           </div>
-          
         </div>
-      </div>
-      <div>
-      
-      </div>
+        <div className="div">
+          <h2 className="text-3xl font-bold mt-3 mb-4">Property Details</h2>
+          <div className="badge border-none text-2xl font-bold"><span><IoLocationOutline className="-ml-3"></IoLocationOutline></span>{location}</div>
+          <h2 className="card-title text-md font-bold my-2"> Title :
+            {estate_title}
+          </h2>
+          <h2 className="card-title text-md font-semibold"> Types :
+            {segment_name}
+          </h2>
 
-    </div></>
+          <div className="badge border-none text-blue-600 text-3xl font-bold pt-6">{price}</div>
+          <div className="icon items-center flex gap-3 mt-5 font-3xl">
+            <button className="border-blue-600 border-2 rounded-xl p-1 px-4 text-blue-600 flex items-center gap-3 text-2xl"> <GoDotFill className="text-2xl "></GoDotFill> {status}</button>
+            <div className="badge border-none items-center gap-3 text-xl"><span><BiHomeAlt2 className="text-2xl "></BiHomeAlt2></span>{area}</div>
+            <div className="items-center">
+              {facilities.slice(0, 1).map((facility, index) => (
+                <div key={index} className="badge border-none gap-2">
+                  <PiBedLight className="text-4xl font-extrabold"></PiBedLight> {facility.split(' ')[0]}
+                </div>
+              ))}
+            </div>
+            <div>
+              {facilities.slice(1, 2).map((facility, index) => (
+                <div key={index} className="badge border-none gap-3">
+                  <PiBathtubThin className="text-4xl font-extrabold"></PiBathtubThin> {facility.split(' ')[0]}
+                </div>
+              ))}
+            </div>
+          </div>
+          <p className="my-4 text-xl"> <span className="text-2xl font-semibold">Details: </span>{description}</p>
+
+          <div>
+            <h1 className="text-2xl font-semibold mb-4">Available facilities:</h1>
+            {facilities.map((facility, index) => (
+              <li key={index} className="list-item text-xl mb-4 font-semibold">
+                {facility}
+              </li>
+            ))}
+          </div>
+          <div className="max-w-md mt-5">
+
+            <button className="btn bg-orange-500 mr-6">Mark your Visit</button>
+          <button className="btn bg-blue-950 text-white hover:text-blue-950">Call our Agent</button>
+        </div>        
+        </div>
+        </div>
+    
+
+    </>
   );
 
-  }
+}
 
 
 export default ViewDetail;
 
 
 
-  
-       
+
+
 
 
 

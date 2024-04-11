@@ -7,7 +7,7 @@ const ContactUs = () => {
       </Helmet>
       <div className="mt-20">
 
-        <h3 className="text-3xl my-7 font-extrabold text-slate-500">
+        <h3 className="text-3xl my-7 font-extrabold text-center text-slate-500">
           Our Agents & Offices
         </h3>
         <div className="section lg:flex justify-between">
@@ -17,7 +17,7 @@ const ContactUs = () => {
             consolidating its leadership. The strength of the brand, the efficiency of the service and the satisfaction of its employees have been recognized and awarded annually by various entities. In Netherlands, Skyline Realty is also the leader in the number of transactions, agencies and associated agents.</div>
 
         </div>
-        <div className="hero min-h-[400px] rounded-lg mt-20" style={{ backgroundImage: 'url(https://i.ibb.co/PNpwBbs/group-business-workers-smiling.jpg)' }}>
+        <div className="hero min-h-[400px] rounded-lg mt-10" style={{ backgroundImage: 'url(https://i.ibb.co/PNpwBbs/group-business-workers-smiling.jpg)' }}>
           <div className="hero-content text-center text-neutral-content">
             <div className="max-w-md">
 
