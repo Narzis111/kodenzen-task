@@ -12,10 +12,11 @@ const SingleCard = ({asset}) => {
       
     return (
         <>
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl transition border-2 hover:scale-105 border-primary
+        hover:border-secondary border-opacity-30">
   <figure><img src={image} alt="" /></figure>
   <div className="card-body">
-    <h2 className="card-title text-md font-bold">
+    <h2 className="card-title hover:underline text-md font-bold">
     {estate_title}
       <div className="badge bg-blue-600 text-white p-3">{status}</div>
     </h2>
@@ -43,7 +44,7 @@ const SingleCard = ({asset}) => {
    
     <div className="items-center card-actions flex">
          <p>Price: {price}</p>
-         <Link to={`/asset/${id}`}><button className="btn bg-blue-200 py-1 rounded-full">View Property</button></Link></div>
+         <Link to={`/asset/${id}`}><button className="btn bg-blue-200 hover:bg-blue-500 py-1 rounded-full hover:scale-105">View Property</button></Link></div>
       
      </div>
   

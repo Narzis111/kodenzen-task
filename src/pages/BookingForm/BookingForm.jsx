@@ -37,10 +37,12 @@ const BookingForm = () => {
        <Helmet>
     <title>Skyline | Booking</title>
  </Helmet>
-    
-    <form onSubmit={handleSubmit} className="bg-blue-300 ro mx-auto shadow-md rounded px-8 pt-6 pb-8 mb-4 w-1/2">
+
+<h3 className='text-2xl font-bold my-10 text-center'>Update User Profile</h3>
+
+    <form onSubmit={handleSubmit} className="bg-blue-950 mx-auto shadow-md rounded px-8 pt-6 pb-8 mb-4 w-1/2">
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2">
+        <label className="block text-white text-sm font-bold mb-2">
           Date
         </label>
         <input
@@ -52,7 +54,7 @@ const BookingForm = () => {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2">
+        <label className="block text-white text-sm font-bold mb-2">
           Time
         </label>
         <input
@@ -64,7 +66,7 @@ const BookingForm = () => {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+        <label className="block text-white text-sm font-bold mb-2" htmlFor="email">
           Email
         </label>
         <input
@@ -76,7 +78,7 @@ const BookingForm = () => {
         />
       </div>
       <div className="mb-6">
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
+        <label className="block text-white text-sm font-bold mb-2" htmlFor="phone">
           Phone
         </label>
         <input

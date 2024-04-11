@@ -11,6 +11,7 @@ import AboutUs from "../pages/AboutUs/AboutUs";
 import ContactUs from "../pages/ContactUS/ContactUs";
 import BookingForm from "../pages/BookingForm/BookingForm";
 import UpdateProfileForm from "../components/UpdateProfileForm/UpdateProfileForm";
+import Blog from "../pages/Blog/Blog";
 
 
 const router = createBrowserRouter([
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>
       },
 
     ]

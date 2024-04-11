@@ -12,7 +12,7 @@ const Navbar = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
-        <li><NavLink to="/blogs">Blogs</NavLink></li>
+        <li><NavLink to="/blog">Blog</NavLink></li>
         <li><NavLink to="/booking">Booking</NavLink></li>
         <li><NavLink to="/update">Update Profile</NavLink></li>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
                     <div className="w-20 items-center">
                         <img className="w-full h-full object-fit text-xl" src={logo} alt="" />
                     </div>
-                    <h1 className="text-xl text-blue-950 font-extrabold mt-5">S<span className="text-yellow-600">K</span>YLINE R<span className="text-yellow-600">E</span>ALTY</h1>
+                    <h1 className="md:text-xl text-xs text-blue-950 font-extrabold mt-5">S<span className="text-yellow-600">K</span>YLINE R<span className="text-yellow-600">E</span>ALTY</h1>
                 </div>
                 </NavLink>
 

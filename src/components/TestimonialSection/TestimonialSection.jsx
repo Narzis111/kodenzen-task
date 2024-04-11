@@ -13,17 +13,21 @@ const TestimonialSection = () => {
   }, []);
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto py-8 my-24">
       <h2 className="text-3xl font-semibold mb-8 text-center">Testimonials</h2>
       <p className='text-md mb-8 mx-auto text-center w-1/2'>Whether you are considering buying, selling, or renting, our Testimonials section provides valuable perspectives from individuals who have benefited from our services.</p>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {testimonials.map((testimonial) => (
           <div
             key={testimonial.id}
-            className={`p-4 mb-4 border rounded-lg shadow-lg bg-white`}
+            className={`p-4 mb-4 border rounded-lg shadow-lg bg-white hover:animate-bounce`}
           >
-            <p className="text-lg font-bold">{testimonial.name}</p>
-            <p className="text-lg animate-bounce font-semibold">{testimonial.profession}</p>
+            <div className="flex items-center">
+              <div className='w-10 rounded-full mr-3'><img className='w-10 h-10 rounded-full' src={testimonial.image} alt="" /></div>
+              <div><p className="text-lg font-bold">{testimonial.name}</p>
+            <p className="text-lg font-semibold">{testimonial.profession}</p>
+            </div>
+            </div>
             <p className="text-gray-600">{testimonial.comment.slice(0,200)}</p>
           </div>
         ))}
