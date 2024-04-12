@@ -7,7 +7,7 @@
     "price": "$2,500,000",
     "status": "sale",
     "area": "3,000 sq ft",
-    "location": "Keizersgracht",
+    "location": "Keizersward",
     "facilities": [
       "4 bedrooms",
       "3 bathrooms",
@@ -39,26 +39,6 @@
   },
   {
     "id": 3,
-    "estate_title": "Seaside Villa with Ocean Views",
-    "segment_name": "Seaside Villa",
-    "description": "Escape to paradise in this luxurious seaside villa located on the picturesque Scheveningen Beach in The Hague. This magnificent property boasts expansive ocean views, private beach access, and lavish amenities. With five bedrooms, five bathrooms, an infinity pool, sauna, and home theater, this villa offers an unparalleled coastal living experience.",
-    "price": "$3,500,000",
-    "status": "rent",
-    "area": "4,500 sq ft",
-    "location": "Scheveningen Beach",
-    "facilities": [
-      "5 bedrooms",
-      "5 bathrooms",
-      "Infinity pool",
-      "Sauna",
-      "Home theater"
-    ],
-    "latitude": 52.110386,
-    "longitude": 4.279840,
-    "image": "https://i.ibb.co/bL70N82/3.jpg"
-  },
-  {
-    "id": 4,
     "estate_title": "Historic Townhouse on Oudegracht",
     "segment_name": "Townhouse",
     "description": "Step back in time with this charming historic townhouse located along the scenic Oudegracht canal in Utrecht. This beautifully preserved property features original details, period furnishings, and a peaceful canal-side garden. The townhouse offers three bedrooms, two bathrooms, a study room, and a courtyard, providing an enchanting retreat in the heart of the city.",
@@ -75,6 +55,26 @@
     "latitude": 52.091550,
     "longitude": 5.120370,
     "image": "https://i.ibb.co/4Pq5w4b/4.jpg"
+  },
+  {
+    "id": 4,
+    "estate_title": "Seaside Villa with Ocean Views",
+    "segment_name": "Seaside Villa",
+    "description": "Escape to paradise in this luxurious seaside villa located on the picturesque Scheveningen Beach in The Hague. This magnificent property boasts expansive ocean views, private beach access, and lavish amenities. With five bedrooms, five bathrooms, an infinity pool, sauna, and home theater, this villa offers an unparalleled coastal living experience.",
+    "price": "$3,500,000",
+    "status": "rent",
+    "area": "4,500 sq ft",
+    "location": "Schevegen Beach",
+    "facilities": [
+      "5 bedrooms",
+      "5 bathrooms",
+      "Infinity pool",
+      "Sauna",
+      "Home theater"
+    ],
+    "latitude": 52.110386,
+    "longitude": 4.279840,
+    "image": "https://i.ibb.co/bL70N82/3.jpg"
   },
   {
     "id": 5,

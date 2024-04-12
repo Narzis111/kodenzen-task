@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
 import { useForm } from 'react-hook-form';
 import { Helmet } from 'react-helmet-async';
+import PropTypes from 'prop-types';
 
 const UpdateProfileForm = () => {
     const { updateUserProfile, user } = useAuth();
@@ -61,11 +62,12 @@ const UpdateProfileForm = () => {
       <button type="submit" className='text-blue-950 text-center items-center px-4 rounded-full bg-yellow-500'>Update Profile</button>
         </form>
 </>
-        
-
-
-    );
+   );
 };
 
 export default UpdateProfileForm;
+
+UpdateProfileForm.propTypes = {
+  errors: PropTypes.object,
+  }
 

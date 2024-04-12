@@ -80,14 +80,13 @@ const ViewDetail = () => {
             ))}
           </div>
           <div className="max-w-md mt-5">
-
-            <button className="btn bg-orange-500 mr-6">Mark your Visit</button>
-          <button className="btn bg-blue-950 text-white hover:text-blue-950">Call our Agent</button>
-        </div>        
+            <Link to="/booking">
+              <button className="btn bg-orange-500 mr-6">Mark your Visit</button>
+            </Link>
+            <button className="btn bg-blue-950 text-white hover:text-blue-950">Call our Agent</button>
+          </div>
         </div>
-        </div>
-    
-
+      </div>
     </>
   );
 

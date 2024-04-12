@@ -6,22 +6,18 @@ import { useLoaderData } from "react-router-dom";
 import 'animate.css';
 import { Helmet } from "react-helmet-async";
 import TestimonialSection from "../../components/TestimonialSection/TestimonialSection";
-import FAQ from "../../components/FAQ/FAQ";
-
-
-
-
+import FaqSection from "../../components/FaqSection/FaqSection";
 
 const Home = () => {
-  
+
     const assets = useLoaderData();
 
 
     return (
-        <div>
-             <Helmet>
+        <div className="font-Roboto">
+            <Helmet>
                 <title>Skyline | Home</title>
-             </Helmet>
+            </Helmet>
             <Slider></Slider>
 
             <Carousal></Carousal>
@@ -42,11 +38,11 @@ const Home = () => {
                 </div>
             </div>
             {/* testimonial */}
-            
+
 
             <TestimonialSection></TestimonialSection>
-            <FAQ></FAQ>
-  
+            <FaqSection></FaqSection>
+
 
         </div>
     );

@@ -1,5 +1,5 @@
 import img11 from "../../assets/caro1.jpg";
-import img12 from "../../assets/caro3.jpg";
+import img12 from "../../assets/blof3.jpg";
 import img13 from "../../assets/caro.jpg";
 import calendar from "/calendar-svgrepo-com.svg";
 const Carousal = () => {
@@ -30,20 +30,20 @@ const Carousal = () => {
             </div>
         </div>
      
-            <div className="absolute lg:max-w-[1180px] bg-black max-w-[250px] p-6 top-40 left-20 md:max-w-[750px] md:mx-auto lg:left-5 lg:right-5 md:left-8 md:right-8 transform translate-y-1/2 opacity-70 px-2 md:py-10">
+            <div className="absolute lg:max-w-[1180px] bg-black max-w-[250px] p-6 lg:top-40 md:top-40 top-6 left-20 md:max-w-[750px] md:mx-auto lg:left-0 lg:right-0 md:left-8 md:right-8 transform translate-y-full opacity-70 px-2 md:py-10">
                 <h1 className="text-white text-xl mb-3 md:text-3xl text-center font-semibold">Better Living</h1>
                 <div className="flex justify-center gap-3 flex-col md:flex-row items-center text-center">
                     
                     <div>
                         <label className="input hidden px-5 md:hidden input-bordered rounded-none lg:flex items-center gap-2">
                             <img className="w-4 h-4 text-gray-200" src={calendar} alt="" />
-                            <input type="text" className="grow" placeholder="Arrival" />
+                            <input type="text" className="grow" placeholder="Mark visit with agent" />
                         </label>
                     </div>
                     <div>
                         <label className="input input-bordered rounded-none flex items-center gap-2">
                             <img className="w-4 h-4 text-gray-200" src={calendar} alt="" />
-                            <input type="text" className="grow" placeholder="Departure" />
+                            <input type="text" className="grow" placeholder="Select your date" />
                         </label>
                     </div>
                     <div>
