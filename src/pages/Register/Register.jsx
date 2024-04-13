@@ -14,7 +14,7 @@ import { Helmet } from "react-helmet-async";
 const Register = () => {
 
   const { createUser } = useAuth();
-  const { showPassword, setShowPassword } = useState(false);
+  const [ showPassword, setShowPassword ] = useState(false);
   const { register, handleSubmit, formState: { errors }, } = useForm();
 
   // navigation systems
@@ -22,24 +22,22 @@ const Register = () => {
   const from = "/";
 
   const onSubmit = (data) => {
-    const { email, password} = data;
+    const { email, password, image} = data;
 
 
-    // Password verification
+    // Password validation
     if (!/(?=.*[a-z])/.test(password) || !/(?=.*[A-Z])/.test(password) || password.length < 6) {
       toast.error('Password must contain at least 6 characters including at least one uppercase letter and one lowercase letter');
       return;
     }
 
-    // //create user and update profile
-    // createUser(email, password)
-    //   .then(() => {
-    //     updateUserProfile(fullName, image)
-    //       .then(() => {
-    //         toast.success('Registration successful');
-    //         navigate(from);
-    //       });
-    //   });
+      // Image URL validation
+      const urlPattern = /^(https?):\/\/.*$/i;
+      if (!urlPattern.test(image)) {
+        toast.error('Please provide a valid image URL');
+        return;
+      }
+
     //create user and update profile
     createUser(email, password)
       .then(() => {
@@ -62,7 +60,7 @@ const Register = () => {
           </div>
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
+            className="card flex-shrink-0 w-full border-2 border-blue-500 max-w-sm shadow-2xl bg-base-100"
           >
             <div className="card-body">
               <div className="form-control">
@@ -110,12 +108,13 @@ const Register = () => {
                 </label>
                 <input
                   type={showPassword ? "text" : "password"}
+                  name="password"
                   placeholder="password"
                   className="input input-bordered"
                   {...register("password", { required: true })}
                 />
                 <span className="absolute text-slate-500 top-14 right-6" 
-                onClick={ () => setShowPassword(!showPassword)}>
+                onClick={() => setShowPassword(!showPassword)}>
                 {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
                 </span>
                 

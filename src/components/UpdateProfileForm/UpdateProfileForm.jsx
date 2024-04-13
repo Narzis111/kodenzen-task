@@ -2,11 +2,12 @@ import { useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
 import { useForm } from 'react-hook-form';
 import { Helmet } from 'react-helmet-async';
-import PropTypes from 'prop-types';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const UpdateProfileForm = () => {
-    const { updateUserProfile, user } = useAuth();
-    const { register, handleSubmit, setValue, formState: { errors } } = useForm();
+    const { updateUserProfile, user, setReload } = useAuth();
+    const { register, handleSubmit, setValue } = useForm();
 
     // Set initial values for displayName and photoURL from user context
     useEffect(() => {
@@ -14,18 +15,27 @@ const UpdateProfileForm = () => {
             setValue('displayName', user.displayName || '');
             setValue('photoURL', user.photoURL || '');
         }
-    }, [user, setValue]);
+    }, [user, setReload, setValue]);
 
     const onSubmit = (data) => {
-        const { displayName, photoURL } = data;
+        const { displayName, photoURL, image } = data;
+
+        const urlPattern = /^(https?):\/\/.*$/i;
+        if (!urlPattern.test(image)) {
+          toast.error('Please provide a valid image URL');
+          return;
+        }
 
         // Update user profile
+        
         updateUserProfile(displayName, photoURL)
             .then(() => {
-                alert('Profile updated successfully!');
+              setReload(true),
+              toast.success('Profile updated successfully!');
+               
             }).catch((error) => {
                 console.error('Error updating profile:', error);
-                alert('An error occurred while updating your profile. Please try again.');
+                toast.error('An error occurred Please try again.');
             });
     };
 
@@ -67,7 +77,4 @@ const UpdateProfileForm = () => {
 
 export default UpdateProfileForm;
 
-UpdateProfileForm.propTypes = {
-  errors: PropTypes.object,
-  }
 

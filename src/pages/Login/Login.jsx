@@ -58,11 +58,11 @@ const Login = () => {
              </Helmet>
             <div className="hero min-h-screen lg:mb-10">
                 <div className="hero-content flex-col lg:flex-row">
-                    <div className="text-center lg:text-left p-4 rounded-xl">
+                    <div className="text-center lg:text-left rounded-xl">
                         <img className='w-full h-full object-cover' src="https://i.ibb.co/3Mgd7rP/grant-lemons-j-TCLppdw-SEc-unsplash.jpg" alt="" />
                     </div>
 
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card border-2 border-blue-500 flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -81,7 +81,7 @@ const Login = () => {
                                     {...register("password", { required: true })}
                                 />
                                 {errors.password && <span className='text-red-500'>This field is required</span>}
-                                {/* <PasswordResetModal/> */}
+                               
                             </div>
                             <div className="form-control mt-6 p-0">
                                 <button className="btn btn-neutral">Login</button>

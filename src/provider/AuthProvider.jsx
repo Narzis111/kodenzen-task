@@ -1,4 +1,4 @@
-import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile, } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile, } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
 import PropTypes from 'prop-types';
@@ -9,7 +9,7 @@ export const AuthContext = createContext(null);
 // social auth providers
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
-const facebookProvider = new FacebookAuthProvider();
+
 
 
 
@@ -18,6 +18,7 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
 
     const [loading, setLoading] = useState(true);
+    const [reload, setReload] = useState(false);
 
     const createUser = (email, password) => {
         setLoading(true);
@@ -33,8 +34,7 @@ const AuthProvider = ({ children }) => {
             photoURL
           })
         }
-        
-        
+           
 
     // signin user
     const logInUser =(email, password) => {
@@ -52,11 +52,7 @@ const AuthProvider = ({ children }) => {
         setLoading(true);
         return signInWithPopup(auth, githubProvider);
     };
-    // facebook login
-    const facebookLogin = () => {
-        setLoading(true);
-        return signInWithPopup(auth, facebookProvider);
-    };
+  
 
     const logOut = () => {
         setUser(null);
@@ -74,7 +70,7 @@ const AuthProvider = ({ children }) => {
         return () => {
             unSubscribe();
         }
-    }, [])
+    }, [reload])
 
 
 
@@ -82,11 +78,11 @@ const AuthProvider = ({ children }) => {
         user,
         setUser,
         loading,
+        setReload,
         createUser,
         logInUser,
         googleLogin,
         githubLogin,
-        facebookLogin,
         logOut,
         updateUserProfile
     }
