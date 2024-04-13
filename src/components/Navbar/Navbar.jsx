@@ -33,19 +33,28 @@ const Navbar = () => {
                 </div>
                 <NavLink to="/">
                     <div className="flex items-center" >
-                        <div className="w-20 items-center">
+                        <div className="items-center w-16">
                             <img className="w-full h-full object-fit text-xl" src={logo} alt="" />
                         </div>
-                        <h1 className="md:text-xl text-xs text-blue-950 font-extrabold mt-5">S<span className="text-yellow-600">K</span>YLINE R<span className="text-yellow-600">E</span>ALTY</h1>
+                        <h1 className="md:text-md text-base text-blue-950 font-extrabold">S<span className="text-yellow-600">K</span>YLINE R<span className="text-yellow-600">E</span>ALTY</h1>
                     </div>
                 </NavLink>
             </div>
 
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-center hidden gap-2 lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {navLinks}
                 </ul>
             </div>
+            <div className="relative">
+                    <span className="absolute text-slate-500 top-4 left-4"><BsFillPinAngleFill></BsFillPinAngleFill></span>
+
+                    <input
+                        type="text"
+                        placeholder="Add your listing here"
+                        className="input input-bordered rounded-full w-24 md:w-auto pl-9"
+                    />
+                </div>
 
             <div className="navbar-end items-center">
                 {user?.email ? (
