@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet-async";
 import TestimonialSection from "../../components/TestimonialSection/TestimonialSection";
 import FaqSection from "../../components/FaqSection/FaqSection";
 
+
 const Home = () => {
 
     const assets = useLoaderData();
@@ -22,11 +23,11 @@ const Home = () => {
 
             <Carousal></Carousal>
             <div>
-                <h2 className="text-center text-3xl font-bold mt-24 hover:animate-ping">Estates: {assets.length} </h2>
-                <p className="lg:max-w-[750px] text-center mx-auto py-6">Skyline Realty is dedicated to providing exceptional estates that redefine luxury living. Our portfolio boasts a diverse range of meticulously curated properties, each crafted with the highest standards of design, quality, and innovation. </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <h2 className="text-center lg:text-3xl text-xl font-bold mt-24">Estates Corner</h2>
+                <p data-aos="zoom-in" data-aos-duration="1000" className="max-w-[750px] text-center mx-auto py-6">Skyline Realty is dedicated to providing exceptional estates that redefine luxury living. Our portfolio boasts a diverse range of meticulously curated properties, each crafted with the highest standards of design, quality, and innovation. </p>
+                <div data-aos="fade-down"
+        data-aos-duration="1000" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
-                    {/* Estates container */}
 
                     {
                         assets.map(asset => <SingleCard
@@ -34,10 +35,8 @@ const Home = () => {
                             asset={asset}></SingleCard>)
                     }
                 </div>
-                <div>
-                </div>
+
             </div>
-            {/* testimonial */}
 
 
             <TestimonialSection></TestimonialSection>

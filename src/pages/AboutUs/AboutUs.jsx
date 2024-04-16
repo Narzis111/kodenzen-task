@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { GiTargetShot, GiAirBalloon } from "react-icons/gi";
 import { GoHeart } from "react-icons/go";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const AboutUs = () => {
   const [showDetails, setShowDetails] = useState(false);
@@ -25,7 +27,7 @@ const AboutUs = () => {
               <h1 className="mb-5 text-center text-2xl font-bold">Why choose Skyline Realty?</h1>
 
               <div className='max-w-[1100px] mx-auto '>
-                <div className='flex justify-around gap-4 text-center items-center max-w-3/4 mx-auto'>
+                <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-around gap-4 text-center items-center max-w-3/4 mx-auto'>
 
                   <div><GiTargetShot className='text-6xl'></GiTargetShot></div>
 

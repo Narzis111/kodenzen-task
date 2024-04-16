@@ -24,17 +24,17 @@ const ViewDetail = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
 
-        <div className="div grid grid-rows-2">
-          <div>
-            <div className="h-[60vh] mx-auto pt-4"><div className="object-cover rounded-lg bg-cover h-full w-full flex items-center justify-center" style={{ backgroundImage: `url(${asset.image})` }}>
+        <div className="div grid grid-rows-2 gap-2">
+         
+            <div data-aos="flip-up" data-aos-delay="1000" className="pt-4 h-full"><div className="object-cover rounded-lg bg-cover h-full w-full flex items-center justify-center" style={{ backgroundImage: `url(${asset.image})` }}>
 
-              <div className="bg-white opacity-50 rounded-lg">
-                <h1 className="text-3xl font-extrabold text-black items-center p-4">{estate_title}</h1>
+              <div className="bg-[#ffffffb3] rounded-lg">
+                <h1 className="text-xl lg:3xl font-extrabold text-black text-center items-center p-4">{estate_title}</h1>
 
               </div>
             </div></div>
-          </div>
-          <div>
+         
+          <div data-aos="flip-up" data-aos-delay="1500">
             <div>
               <MapWithMarker latitude={latitude} longitude={longitude} />
             </div>
@@ -43,10 +43,10 @@ const ViewDetail = () => {
         <div className="div">
           <h2 className="text-3xl font-bold mt-3 mb-4">Property Details</h2>
           <div className="badge border-none text-2xl font-bold"><span><IoLocationOutline className="-ml-3"></IoLocationOutline></span>{location}</div>
-          <h2 className="card-title text-md font-bold my-2"> Title :
+          <h2 className="card-title text-md font-bold my-2"> Title: 
             {estate_title}
           </h2>
-          <h2 className="card-title text-md font-semibold"> Types :
+          <h2 className="card-title text-md font-semibold"> Types:
             {segment_name}
           </h2>
 

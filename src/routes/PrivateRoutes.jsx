@@ -4,7 +4,7 @@ import useAuth from '../hooks/useAuth';
 import PropTypes from 'prop-types';
 
 const PrivateRoutes = ({ children }) => {
-    const { user, loading, setReload } = useAuth();
+    const { user, loading } = useAuth();
     const location = useLocation();
 
 
@@ -13,8 +13,9 @@ const PrivateRoutes = ({ children }) => {
     }
     if (!user) { 
         
-        return <Navigate to='/login' state={{ from: location.pathname }} />
+        return <Navigate to="/login" state={location.pathname}></Navigate>
     }
+
 
     return children;
     

@@ -1,8 +1,10 @@
 const FaqSection = () => {
     return (
-        <div className="faq">
-            <h2 className="text-3xl font-semibold text-center mb-8">Frequently Asked Questions</h2>
-            <div className="collapse collapse-arrow bg-base-200 mb-3">
+        <div data-aos="fade-down" data-aos-duration="1000" className="faq max-w-[1180px] mx-auto">
+            <h2 className="text-xl md:text-3xl font-semibold text-center mb-8">Frequently Asked Questions</h2>
+            <div>
+            <div data-aos="zoom-in-out"
+        data-aos-delay="1000" className="collapse collapse-arrow bg-base-200 mb-3">
                 <input type="radio" name="my-accordion-2" defaultChecked />
                 <div className="collapse-title text-xl font-medium">
                     What are your service areas?
@@ -13,7 +15,8 @@ const FaqSection = () => {
                     </p>
                 </div>
             </div>
-            <div className="collapse collapse-arrow bg-base-200 mb-3">
+            <div data-aos="zoom-in-up"
+        data-aos-delay="1500" className="collapse collapse-arrow bg-base-200 mb-3">
                 <input type="radio" name="my-accordion-2" />
                 <div className="collapse-title text-xl font-medium">
                     How can I list my property with Skyline Realty?
@@ -23,7 +26,8 @@ const FaqSection = () => {
                     </p>
                 </div>
             </div>
-            <div className="collapse collapse-arrow bg-base-200 mb-3">
+            <div data-aos="zoom-in-out"
+        data-aos-delay="2000" className="collapse collapse-arrow bg-base-200 mb-3">
                 <input type="radio" name="my-accordion-2" />
                 <div className="collapse-title text-xl font-medium">
                     Do you provide assistance with mortgage applications?
@@ -31,6 +35,7 @@ const FaqSection = () => {
                 <div className="collapse-content">
                     <p>Yes, we work closely with trusted mortgage brokers who can assist you with mortgage applications and provide expert advice tailored to your needs.</p>
                 </div>
+            </div>
             </div>
         </div>
     );

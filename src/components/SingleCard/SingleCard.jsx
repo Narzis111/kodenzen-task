@@ -10,17 +10,17 @@ const SingleCard = ({ asset }) => {
 
 
   return (
-    <>
-      <div className="card w-96 bg-base-100 shadow-xl transition border-2 hover:scale-105 border-primary
-        hover:border-secondary border-opacity-30">
-        <figure><img src={image} alt="" /></figure>
+    <div>
+      <div className="card w-90 h-90 bg-base-100 shadow-xl hover:border-2 border-secondary
+        border-opacity-30 ">
+        <figure><img className="hover:scale-105" src={image} alt="" /></figure>
         <div className="card-body">
           <h2 className="card-title hover:underline text-md font-bold">
             {estate_title}
             <div className="badge bg-blue-600 text-white p-3">{status}</div>
           </h2>
           <p>{description.split(" ").slice(0, 10).join(" ")}</p>
-          <div className="card-actions justify-between">
+          <div className="card-actions justify-between hover:bg-blue-500 hover:py-3">
             <div className="badge border-none"><span><IoLocationOutline></IoLocationOutline></span>{location.split(" ").slice(0, 1).join(" ")}</div>
             <div className="badge border-none"><span><BiHomeAlt2></BiHomeAlt2></span>{area}</div>
             <div>
@@ -49,7 +49,7 @@ const SingleCard = ({ asset }) => {
 
       </div>
 
-    </>
+    </div>
 
 
   );

@@ -31,7 +31,7 @@ Welcome to Skyline Realty, your ultimate destination for finding the perfect res
 ## Challenges Accomplished
 - AOS Package and animate.css: Utilized the AOS (Animate On Scroll) and animate.css package for smooth and captivating animations throughout the website.
 
-- Protected Route with User Profile: Created a protected route where logged-in users can view and edit their profile information, with changes securely saved using Firebase's updateProfile() method.
+- Used the React hook form and Protected Route with User Profile: Created a protected route where logged-in users can view and edit their profile information, with changes securely saved using Firebase's updateProfile() method.
 
 
 ## About
@@ -41,7 +41,7 @@ Start your search with Skyline Realty today and turn your dream home into a real
 
 
 ## Resources
--  [React Router Dom](https://reactrouter.com/en/main/start/tutorial)
+- [React Router Dom](https://reactrouter.com/en/main/start/tutorial)
 - [Mamba UI - Components](https://mambaui.com/components)
 - [React-Icons](https://react-icons.github.io/react-icons/)
 - [Prop-Types](https://www.npmjs.com/package/prop-types)
@@ -49,7 +49,7 @@ Start your search with Skyline Realty today and turn your dream home into a real
 - [TailwindCSS](https://tailwindcss.com/)
 ## Feedback
 
-If you have any feedback, please reach out to us at narzisnahae111@gmail
+If you have any feedback, please reach out to us at narzisnahar111@gmail
 ## Authors
 - [@Narzis111](https://www.github.com/Narzis111)
 
