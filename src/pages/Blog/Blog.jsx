@@ -54,7 +54,7 @@ const Blog = () => {
 						{/* 2nd */}
 						<div className="container max-w-6xl mx-auto space-y-6 sm:space-y-12">
 							<a rel="noopener noreferrer" href="#" className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50">
-								<img src={blog1} alt="" className="object-cover w-full h-6 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500" />
+								<img src={blog1} alt="" className="object-cover w-full h-[60vh] rounded sm:h-96 lg:col-span-7 dark:bg-gray-500" />
 								<div className="mt-5 lg:col-span-5">
 									<p>Flexibility: Homeowners have the flexibility to use their property when it is not rented, allowing them to enjoy their home while generating income when not using it.
 										Personalized Experience: Travelers seek authentic and unique experiences, and vacation rentals give them the opportunity to stay in local homes, which can enrich their travel experience.
