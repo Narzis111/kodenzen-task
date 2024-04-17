@@ -42,10 +42,10 @@ const ViewDetail = () => {
         <div className="div px-8">
           <h2 className="text-3xl font-bold mt-3 mb-4">Property Details</h2>
           <div className="badge border-none text-2xl font-bold"><span><IoLocationOutline className="-ml-3"></IoLocationOutline></span>{location}</div>
-          <h2 className="card-title text-md font-bold my-2"> Title: 
+          <h2 className="card-title text-md font-bold my-2"> Title:  
             {estate_title}
           </h2>
-          <h2 className="card-title text-md font-semibold"> Types:
+          <h2 className="card-title text-md font-semibold"> Types: 
             {segment_name}
           </h2>
 
