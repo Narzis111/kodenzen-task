@@ -49,11 +49,11 @@ const ViewDetail = () => {
             {segment_name}
           </h2>
 
-          <div className="badge border-none text-blue-600 text-3xl font-bold pt-6 flex gap-8">
+          <div className="badge border-none text-blue-600 text-3xl font-bold pt-6 flex gap-0 lg:gap-8">
             {price}
             <button className="rounded-xl p-1 px-4 text-blue-600 flex items-center gap-3 text-2xl"> <GoDotFill className="text-2xl "></GoDotFill> {status}</button>
             </div>
-          <div className="icon flex justify-center gap-3 mt-5 font-3xl items-center">
+          <div className="icon flex justify-between gap-3 mt-5 font-3xl items-center">
             <div className="badge border-none items-center gap-3 text-xl"><span><BiHomeAlt2 className="text-2xl"></BiHomeAlt2></span>{area}</div>
          
             <div className="items-center font-3xl">
