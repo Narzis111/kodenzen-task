@@ -41,7 +41,7 @@ const BookingForm = () => {
         <div className="hero-overlay bg-opacity-30"></div>
         <div className="hero-content">
 
-          <div className='w-full bg-transparent'>
+          <div className='w-full'>
             <h3 className='text-2xl font-bold my-10 text-center text-white'>Mark Your Visit With Our Agent</h3>
 
             <form onSubmit={handleSubmit} className="bg-blue-transparent mx-auto shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full">

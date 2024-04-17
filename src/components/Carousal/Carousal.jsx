@@ -6,7 +6,7 @@ import img13 from "../../assets/caro.jpg";
 const Carousal = () => {
     return (
 
-        <div className="carousel w-full mt-5">
+        <div className="carousel w-full mt-5 z-10">
             <div data-aos="fade-up" id="slide1" className="carousel-item relative w-full h-[400px]">
                 <img src={img11} className="w-full rounded-lg object-cover" />
                 <div className="absolute flex justify-center bottom-0 left-1/2">

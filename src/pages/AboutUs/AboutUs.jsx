@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+
 import { GiTargetShot, GiAirBalloon } from "react-icons/gi";
 import { GoHeart } from "react-icons/go";
 import AOS from 'aos';
@@ -18,6 +19,8 @@ const AboutUs = () => {
       <Helmet>
         <title>Skyline | About</title>
       </Helmet>
+  
+      
       <div className='mt-10 p-10 rounded-xl min-h-screen'>
 
         <div className="hero max-h-[550px] rounded-xl" style={{ backgroundImage: 'url(https://i.ibb.co/Wghbp3S/publica-tu-alojamiento-foto.jpg)' }}>

@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
 const Slider = () => {
     return (
-        <label data-aos="flip-down"
+        <label data-aos="flip-down z-0"
         data-aos-duration="1000" className="input my-10 flex items-center gap-2">
                 <span className="badge badge-info bg-orange-500 font-bold px-6 py-4 rounded">Latest</span>
                 <Marquee pauseOnHover={true} speed={50}>

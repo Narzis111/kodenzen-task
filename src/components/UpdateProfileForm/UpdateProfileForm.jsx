@@ -42,7 +42,7 @@ const UpdateProfileForm = () => {
                     <div className="w-full">
                         <h3 className='text-2xl text-black font-bold my-10 text-center'>Update User Profile</h3>
                         <form onSubmit={handleSubmit(onSubmit)}
-                            className="bg-blue-950 mx-auto shadow-md rounded px-8 pt-6 pb-8 mb-4 w-[500px]">
+                            className="bg-blue-950 mx-auto shadow-md rounded px-8 pt-6 pb-8 mb-4 lg:w-[500px]">
                             <div className="mb-4">
                                 <label className="block text-white text-sm font-bold mb-2">
                                     Display Name:

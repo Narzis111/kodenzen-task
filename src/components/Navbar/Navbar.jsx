@@ -17,7 +17,7 @@ const Navbar = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
                     
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className=" bg-blue-400 z-30 menu menu-sm dropdown-content -mt-3 shadow rounded-box w-52">
                         <li><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/about">About</NavLink></li>
                         <li><NavLink to="/contact">Contact</NavLink></li>
@@ -67,7 +67,7 @@ const Navbar = () => {
                             onMouseLeave={() => setShowDropdown(false)}
                         >
                             <div className="w-10 rounded-full">
-                                <img className="cursor-pointer" src={user?.photoURL || "https://i.ibb.co/vQSpww7/user.png"} alt="User" />
+                                <img className="cursor-pointer" src={user?.photoURL || "https://i.ibb.co/vQSpww7/user.png"} alt="user" />
                             </div>
                         </div>
                         {showDropdown && (
@@ -77,7 +77,7 @@ const Navbar = () => {
 
                                 <button className="btn btn-sm text-white hover:text-black bg-red-600" onClick={logOut}>Log Out</button>
 
-                                <button className="btn btn-sm bg-slate-300 border-2 border-black" onClick={logOut}>Log Out</button>
+                               
 
                             </div>
                         )}

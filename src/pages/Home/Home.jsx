@@ -1,8 +1,8 @@
 
 import Carousal from "../../components/Carousal/Carousal";
 import SingleCard from "../../components/SingleCard/SingleCard";
-import Slider from "../../components/Slider/Slider";
 import { useLoaderData } from "react-router-dom";
+import Slider from "../../components/Slider/Slider";
 import 'animate.css';
 import { Helmet } from "react-helmet-async";
 import TestimonialSection from "../../components/TestimonialSection/TestimonialSection";
@@ -19,8 +19,7 @@ const Home = () => {
             <Helmet>
                 <title>Skyline | Home</title>
             </Helmet>
-            <Slider></Slider>
-
+           <Slider></Slider>
             <Carousal></Carousal>
             <div>
                 <h2 className="text-center lg:text-3xl text-xl font-bold hover:animate-heartBeat-2s transition-transform mt-24">Estates Corner</h2>

@@ -25,7 +25,7 @@ const ViewDetail = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
         <div className="div grid grid-rows-2 gap-2">
          
-            <div data-aos="flip-up" data-aos-delay="1000" className="pt-4 h-full"><div className="object-cover rounded-lg bg-cover h-full w-full flex items-center justify-center" style={{ backgroundImage: `url(${asset.image})` }}>
+            <div className="pt-4 h-full"><div className="object-cover rounded-lg bg-cover h-full w-full flex items-center justify-center" style={{ backgroundImage: `url(${asset.image})` }}>
 
               <div className="bg-[#ffffffb3] rounded-lg">
                 <h1 className="text-xl lg:3xl font-extrabold text-black text-center items-center p-4">{estate_title}</h1>
@@ -33,7 +33,7 @@ const ViewDetail = () => {
               </div>
             </div></div>
          
-          <div data-aos="flip-up" data-aos-delay="1500">
+          <div>
             <div>
               <MapWithMarker latitude={latitude} longitude={longitude} />
             </div>
@@ -49,20 +49,24 @@ const ViewDetail = () => {
             {segment_name}
           </h2>
 
-          <div className="badge border-none text-blue-600 text-3xl font-bold pt-6">{price}</div>
-          <div className="icon items-center flex gap-3 mt-5 font-3xl">
-            <button className="border-blue-600 border-2 rounded-xl p-1 px-4 text-blue-600 flex items-center gap-3 text-2xl"> <GoDotFill className="text-2xl "></GoDotFill> {status}</button>
-            <div className="badge border-none items-center gap-3 text-xl"><span><BiHomeAlt2 className="text-2xl "></BiHomeAlt2></span>{area}</div>
-            <div className="items-center">
+          <div className="badge border-none text-blue-600 text-3xl font-bold pt-6 flex gap-8">
+            {price}
+            <button className="rounded-xl p-1 px-4 text-blue-600 flex items-center gap-3 text-2xl"> <GoDotFill className="text-2xl "></GoDotFill> {status}</button>
+            </div>
+          <div className="icon flex justify-center gap-3 mt-5 font-3xl items-center">
+            <div className="badge border-none items-center gap-3 text-xl"><span><BiHomeAlt2 className="text-2xl"></BiHomeAlt2></span>{area}</div>
+         
+            <div className="items-center font-3xl">
               {facilities.slice(0, 1).map((facility, index) => (
-                <div key={index} className="badge border-none gap-2">
+                <div key={index} className="badge border-none gap-2 items-center">
                   <PiBedLight className="text-4xl font-extrabold"></PiBedLight> {facility.split(' ')[0]}
                 </div>
               ))}
             </div>
-            <div>
+       
+            <div className="items-center font-3xl">
               {facilities.slice(1, 2).map((facility, index) => (
-                <div key={index} className="badge border-none gap-3">
+                <div key={index} className="badge border-none gap-3 items-center">
                   <PiBathtubThin className="text-4xl font-extrabold"></PiBathtubThin> {facility.split(' ')[0]}
                 </div>
               ))}
