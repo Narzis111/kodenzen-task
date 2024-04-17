@@ -2,9 +2,16 @@
 Welcome to Skyline Realty, your ultimate destination for finding the perfect residential properties! Whether you are looking for a cozy apartment, a spacious townhouse, or a serene rental, we have got you covered. Our website is designed to provide you with a seamless and enjoyable experience as you search for your dream home.
 
 
-
 ## Visit us:
 - [SkylineRealty](https://assignment-9-project-7021d.web.app/)
+
+
+## About
+Skyline Realty is dedicated to simplifying the process of finding your ideal residential property. Our team is committed to providing you with exceptional service and support at every step of your real estate journey.
+
+Start your search with Skyline Realty today and turn your dream home into a reality!
+
+
 
 ## Features
 - Responsive Design: Skyline Realty is optimized for all devices, including mobile phones, tablets, and desktop computers, ensuring a consistent user experience across platforms.
@@ -31,25 +38,26 @@ Welcome to Skyline Realty, your ultimate destination for finding the perfect res
 ## Challenges Accomplished
 - AOS Package and animate.css: Utilized the AOS (Animate On Scroll) and animate.css package for smooth and captivating animations throughout the website.
 
-- Used the React hook form and Protected Route with User Profile: Created a protected route where logged-in users can view and edit their profile information, with changes securely saved using Firebase's updateProfile() method.
-
-
-## About
-Skyline Realty is dedicated to simplifying the process of finding your ideal residential property. Our team is committed to providing you with exceptional service and support at every step of your real estate journey.
-
-Start your search with Skyline Realty today and turn your dream home into a reality!
+- Used the React hook form and Protected Route: Used the Hook form in Signup and Signin form. Created a protected route where logged-in users can view and edit their profile information, with changes securely saved using Firebase's updateProfile() method.
 
 
 ## Resources
-- [React Router Dom](https://reactrouter.com/en/main/start/tutorial)
+- [React Router](https://reactrouter.com/en/main/start/tutorial)
 - [Mamba UI - Components](https://mambaui.com/components)
 - [React-Icons](https://react-icons.github.io/react-icons/)
 - [Prop-Types](https://www.npmjs.com/package/prop-types)
+- [React-toastify](https://www.npmjs.com/package/react-toastify)
 - [Daisy UI](https://daisyui.com/)
 - [TailwindCSS](https://tailwindcss.com/)
+- [React-Helmet-async](https://www.npmjs.com/package/react-helmet-async)
+- [Firebase](https://firebase.google.com/)
+- [Animation.css](https://animate.style/)
+- [AOS animation](https://github.com/michalsnik/aos)
+
 ## Feedback
 
 If you have any feedback, please reach out to us at narzisnahar111@gmail
+
 ## Authors
 - [@Narzis111](https://www.github.com/Narzis111)
 

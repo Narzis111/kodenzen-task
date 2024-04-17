@@ -14,13 +14,13 @@ const TestimonialSection = () => {
 
   return (
     <div className="container mx-auto py-8 my-24">
-      <h2 data-aos="fade-down" data-aos-duration="1000" className="text-3xl font-semibold mb-8 text-center">Testimonials</h2>
-      <p data-aos="zoom-in-up" data-aos-duration="1500" className='text-md mb-8 mx-auto text-center w-full md:w-1/2'>Whether you are considering buying, selling, or renting, our Testimonials section provides valuable perspectives from individuals who have benefited from our services.</p>
+      <h2 data-aos="fade-down" data-aos-duration="1000" className="text-3xl font-semibold hover:animate-heartBeat-2s mb-8 text-center">Testimonials</h2>
+      <p data-aos="zoom-in-up" data-aos-duration="1500" className='text-md mb-8 mx-auto text-center w-full md:w-1/2 hover:animate-flash-2s'>Whether you are considering buying, selling, or renting, our Testimonials section provides valuable perspectives from individuals who have benefited from our services.</p>
       <div data-aos="fade-up"
         className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {testimonials.map((testimonial) => (
           <div
-            key={testimonial.id} className={`p-4 mb-4 border rounded-lg shadow-lg bg-white`}
+            key={testimonial.id} className={`p-4 mb-4 border rounded-lg hover:animate-swing-2s hover:bg-orange-500 hover:text-white shadow-lg bg-white`}
           >
             <div className="flex items-center">
               <div className='w-10 rounded-full mr-3'><img className='w-10 h-10 rounded-full' src={testimonial.image} alt="" /></div>

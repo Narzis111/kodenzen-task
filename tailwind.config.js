@@ -8,6 +8,12 @@ export default {
     extend: {
       fontFamily: 
       { Roboto: "'Roboto', sans-serif"
+    },
+    animation: {
+      'bounce-2s': 'bounce 2s infinite',
+      'flash-2s': 'flash 2s infinite',
+      'heartBeat-2s': 'heartBeat 2s infinite',
+      'swing-2s': 'swing 2s infinite',
     }
   },
 },

@@ -73,7 +73,7 @@ const UpdateProfileForm = () => {
                                     <p className="text-red-500 text-xs italic">{errors.photoURL.message}</p>
                                 )}
                             </div>
-                            <button type="submit" className='text-blue-950 text-center items-center px-4 rounded-full bg-yellow-500'>Update Profile</button>
+                            <button type="submit" className='text-white py-3 text-center items-center px-4 rounded-full bg-orange-500'>Update Profile</button>
                         </form>
                     </div>
                 </div>

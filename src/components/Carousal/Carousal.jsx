@@ -32,7 +32,7 @@ const Carousal = () => {
             </div>
 
             <div className="absolute rounded-lg lg:max-w-[1180px] bg-[#000000b3] max-w-[280px] p-6 lg:top-40 md:top-40 top-0 left-20 md:max-w-[750px] md:mx-auto lg:left-0 lg:right-0 transform translate-y-full md:left-8 md:right-8 px-2 md:py-10">
-                <h1 className="text-white text-xl mb-3 md:text-3xl text-center font-semibold">Better Living</h1>
+                <h1 className="text-white text-xl mb-3 md:text-3xl text-center font-semibold hover:animate-flash-2s">Better Living</h1>
                 <div className="flex justify-center gap-3 flex-col md:flex-row items-center text-center">
 
                     <div data-aos="zoom-in-up" data-aos-delay="1000">

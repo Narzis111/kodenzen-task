@@ -1,7 +1,7 @@
 const FaqSection = () => {
     return (
         <div data-aos="fade-down" data-aos-duration="1000" className="faq max-w-[1180px] mx-auto">
-            <h2 className="text-xl md:text-3xl font-semibold text-center mb-8">Frequently Asked Questions</h2>
+            <h2 className="text-xl md:text-3xl hover:animate-flash-2s font-semibold text-center mb-8">Frequently Asked Questions</h2>
             <div>
             <div data-aos="zoom-in-out"
         data-aos-delay="1000" className="collapse collapse-arrow bg-base-200 mb-3">

@@ -15,7 +15,7 @@ const Navbar = () => {
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box gap-2 w-60">
                         <li><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/about">About</NavLink></li>
                         <li><NavLink to="/contact">Contact</NavLink></li>
@@ -72,7 +72,7 @@ const Navbar = () => {
                             <div className="absolute top-full right-12 -mt-7 border-2 border-orange-500 bg-white rounded shadow-md p-2 z-10" onMouseEnter={() => setShowDropdown(true)} onMouseLeave={() => setShowDropdown(false)}>
                                 <span className="text-gray-600">{user.displayName}</span> <br />
                                 <span className="text-gray-600">{user.email}</span>
-                                <button className="btn btn-sm bg-slate-300 border-2 border-black" onClick={logOut}>Log Out</button>
+                                <button className="btn btn-sm text-white hover:text-black bg-red-600" onClick={logOut}>Log Out</button>
                             </div>
                         )}
                     </div>
