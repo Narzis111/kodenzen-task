@@ -1,0 +1,89 @@
+.parent-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+  }
+  
+.kzui-select {
+    position: relative;
+    width: 300px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .kzui-select__title {
+    margin-bottom: 12px;
+    font-weight: bold;
+  }
+  
+  .kzui-select__control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .kzui-select__value {
+    flex: 1;
+  }
+  
+  .kzui-select__clear {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .kzui-select__menu {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 2px;
+    z-index: 10;
+  }
+  
+  .kzui-select__search {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .kzui-select__options {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .kzui-select__option {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .kzui-select__option:hover {
+    background-color: #9db4c6;
+  }
+  
+  .kzui-select__option--selected {
+    background-color: #e0e0e0;
+  }
+  
+  .kzui-select__group {
+    padding: 8px 0;
+  }
+  
+  .kzui-select__group-label {
+    padding: 8px;
+    font-weight: bold;
+  }
+  
+  .kzui-select--disabled .kzui-select__control {
+    background: #d46262;
+    cursor: not-allowed;
+  }
+  
+  

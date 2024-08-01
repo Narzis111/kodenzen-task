@@ -1,49 +1,62 @@
+import { useState } from 'react';
+import CustomSelect from '../../components/CustomSelect/CustomSelect';
+import { Helmet } from 'react-helmet-async';
 
-import Carousal from "../../components/Carousal/Carousal";
-import SingleCard from "../../components/SingleCard/SingleCard";
-import { useLoaderData } from "react-router-dom";
-import Slider from "../../components/Slider/Slider";
-import 'animate.css';
-import { Helmet } from "react-helmet-async";
-import TestimonialSection from "../../components/TestimonialSection/TestimonialSection";
-import FaqSection from "../../components/FaqSection/FaqSection";
-
+const options = [
+    { label: 'Option 1', value: 'option1' },
+    { label: 'Option 2', value: 'option2' },
+    { label: 'Option 3', value: 'option3', group: 'Group 1' },
+    { label: 'Option 4', value: 'option4', group: 'Group 1' },
+    { label: 'Option 5', value: 'option5', group: 'Group 2' },
+];
 
 const Home = () => {
+    const [selectedValue, setSelectedValue] = useState([]);
 
-    const assets = useLoaderData();
+    const handleChange = (value) => {
+        setSelectedValue(value);
+    };
 
+    const handleMenuOpen = () => {
+        console.log('Menu opened');
+    };
+
+    const handleSearch = (searchText) => {
+        console.log('Search text:', searchText);
+    };
 
     return (
-        <div className="font-Roboto">
+        <>
             <Helmet>
-                <title>Skyline | Home</title>
+                <title>
+                    Kodenzen-task | Home
+                </title>
             </Helmet>
-           <Slider></Slider>
-            <Carousal></Carousal>
             <div>
-                <h2 className="text-center lg:text-3xl text-xl font-bold hover:animate-heartBeat-2s transition-transform mt-24">Estates Corner</h2>
-                <p data-aos="zoom-in" data-aos-duration="1000" className="max-w-[750px] hover:animate-flash-2s text-center mx-auto py-6">Skyline Realty is dedicated to providing exceptional estates that redefine luxury living. Our portfolio boasts a diverse range of meticulously curated properties, each crafted with the highest standards of design, quality, and innovation. </p>
-                <div data-aos="fade-down"
-                    data-aos-duration="1000" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
-
-                    {
-                        assets.map(asset => <SingleCard
-                            key={asset.id}
-                            asset={asset}></SingleCard>)
-                    }
+                <div className="parent-container">
+                    <div className="kzui-select">
+                        <CustomSelect
+                            title="Select an Option"
+                            isClearable
+                            isSearchable
+                            options={options}
+                            value={selectedValue}
+                            placeholder="Select an option"
+                            isGrouped
+                            isMulti
+                            onChangeHandler={handleChange}
+                            onMenuOpen={handleMenuOpen}
+                            onSearchHandler={handleSearch}
+                        />
+                    </div>
                 </div>
 
             </div>
 
-
-            <TestimonialSection></TestimonialSection>
-            <FaqSection></FaqSection>
-
-
-        </div>
+        </>
     );
 };
 
 export default Home;
+
